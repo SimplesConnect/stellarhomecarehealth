@@ -35,7 +35,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="subtitle mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-medium mb-8 max-w-2xl mx-auto text-white/95 drop-shadow-lg">
             Personalized care that puts your loved one's health and comfort first. 
             Professional, reliable, and compassionate home healthcare services.
           </p>

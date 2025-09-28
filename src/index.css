@@ -2,39 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Stellar Homecare Health Design System - Healthcare-focused professional design */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Stellar Green - Primary brand color from logo */
+    --primary: 88 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 88 60% 75%;
+    --primary-dark: 88 60% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Stellar Blue - Secondary brand color from logo */
+    --secondary: 204 65% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 204 65% 75%;
+    --secondary-dark: 204 65% 35%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Healthcare-focused neutral palette */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 88 35% 95%;
+    --accent-foreground: 88 60% 25%;
 
+    /* Healthcare trust colors */
+    --trust: 204 85% 45%;
+    --trust-foreground: 0 0% 100%;
+
+    /* Emergency/urgent colors */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --ring: 88 60% 55%;
+
+    /* Gradients for hero sections */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-trust: linear-gradient(45deg, hsl(var(--trust)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(var(--background)) 100%);
+
+    /* Shadows for depth and trust */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--secondary) / 0.15);
+    --shadow-strong: 0 20px 40px hsl(220 15% 20% / 0.1);
 
     --radius: 0.5rem;
 
@@ -56,33 +77,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 25% 8%;
+    --foreground: 220 10% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 25% 10%;
+    --card-foreground: 220 10% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 10% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 88 60% 60%;
+    --primary-foreground: 220 25% 8%;
+    --primary-light: 88 60% 80%;
+    --primary-dark: 88 60% 40%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 204 65% 60%;
+    --secondary-foreground: 220 25% 8%;
+    --secondary-light: 204 65% 80%;
+    --secondary-dark: 204 65% 40%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 88 35% 15%;
+    --accent-foreground: 88 60% 75%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --trust: 204 85% 50%;
+    --trust-foreground: 220 25% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 25% 8%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 18%;
+    --ring: 88 60% 60%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-trust: linear-gradient(45deg, hsl(var(--trust)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(var(--background)) 100%);
+
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 20px 40px hsl(0 0% 0% / 0.5);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +136,47 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+
+  .hero-text {
+    @apply text-5xl md:text-6xl font-bold leading-tight;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold text-center mb-12;
+  }
+
+  .subtitle {
+    @apply text-xl text-muted-foreground;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-trust {
+    background: var(--gradient-trust);
+  }
+
+  .gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
   }
 }

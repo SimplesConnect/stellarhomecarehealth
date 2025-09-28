@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
     text: "We couldn't be happier with the specialized care our grandmother receives. The team understands her dementia and provides the patient, loving support she needs. It gives us such peace of mind.",
     service: "Memory Care"
   }];
-  return <section id="testimonials" className="py-20 bg-background">
+  return <section id="testimonials" className="pt-20 pb-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="section-heading">
